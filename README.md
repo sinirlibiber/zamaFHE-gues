@@ -3,24 +3,21 @@
 This repo is a privacy-oriented number guessing game made with Zama FHEVM. Encrypted guesses, random numbers and a simple tour system.
 
 
-## 🌟 Key Features
 
-### 🔐 **Privacy-First Gaming**
-- **Fully Encrypted Gameplay**: All guesses are encrypted on-chain using Zama's FHEVM
-- **Zero-Knowledge Privacy**: No player can see others' guesses until results are revealed
-- **Confidential Smart Contracts**: Game logic operates on encrypted data without decryption
 
-### ⏰ **Time-Based Round System**
-- **Odd Hours (13:00, 15:00, 17:00...)**: Round initiation and guess submission
-- **Even Hours (14:00, 16:00, 18:00...)**: Result revelation and winner announcement
-- **UTC+3 Timezone**: Real-time scheduling system
+### 🎮️ **Game Mechanics**
 
-### 🎮 **How to Play**
-1. **Connect Wallet**: MetaMask integration with Sepolia testnet
-2. **Wait for Odd Hour**: Rounds start automatically during odd hours
-3. **Submit Encrypted Guess**: Enter a number between 0-100
-4. **Wait for Reveal**: Results disclosed during even hours
-5. **Winner Selection**: Closest guess to the secret number wins
+Tour System: The game is divided into rounds lasting 5 minutes each (in the original it was clock-based, this was simplified for the demo). In each round, a new random number (Dec. 1-100) is generated.
+Encrypted Guesses: Players send their guesses (a number between 1-100) Decryptively. Thanks to FHEVM, estimates and random numbers remain encrypted on the blockchain, so privacy is protected.
+Determining the Winner: At the end of the round, the encrypted random number is compared with the encrypted predictions (with FHE). The player who makes the closest guess wins.
+Simulation Note: Instead of the real FHEVM, this demo generates a simple random number (with keccak256). In real application, Zama's FHE functions such as randEuint8 are used.
+
+### ⏰ **Gameplay Steps**
+The Tour Starts: The contract holder starts a new tour (startNewRound). A random number is determined (cryptically).
+Sending a Guess: Players make a guess between 1-100 (submitGuess). Decryption: The player must submit a guess between 1-100 (submitGuess). Forecasts are saved in encrypted form.
+Result Description: At the end of the round, the contract holder announces the result (revealResult). The closest guess is determined and the winner is announced.
+Privacy: All transactions (predictions, comparisons) are encrypted so that no one can see the predictions of other players.
+
 
 ## 🛠️ Technology Stack
 
