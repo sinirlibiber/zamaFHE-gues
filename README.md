@@ -72,8 +72,8 @@ zamaFHE-gues/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/fheguess.git
-cd fheguess
+git clone  `git clone https://github.com/sinirlibiber/zamaFHE-gues.git `
+cd zamaFHE-gues
 ```
 
 ### 2. Smart Contract Setup
@@ -273,8 +273,3 @@ This project is licensed under the **MIT License**
 
 **Using Zama's FHEVM technology**
 
-[![Zama](https://img.shields.io/badge/Powered_by-Zama_FHEVM-gold?style=flat-square)](https://zama.ai)
-[![Ethereum](https://img.shields.io/badge/Built_on-Ethereum-blue?style=flat-square)](https://ethereum.org)
-[![React](https://img.shields.io/badge/Frontend-React-61dafb?style=flat-square)](https://reactjs.org)
-
-</div>
